@@ -27,8 +27,10 @@
     --teaser-read-more-link-color: #5d9ac0;
     /* --teaser-read-more-link-color: #5c86a1; */
     --teaser-date-background-color: var(--body-background-color);
+    --teaser-footer-text-color: #5cacdd;
 
-    --footer-background-color: var(--body-background-color)
+    --footer-background-color: var(--body-background-color);
+    --footer-background-color: var(--nav-background-color);
 }
 
 * {
@@ -46,7 +48,8 @@ body {
 
 .nav {
     font-size: 1.3rem;
-    padding: 0.5em;
+    /* padding: 0.5em; */
+    padding: 1.4vmax 1.6vmax 1.4vmax 1.2vmax;
     background: var(--nav-background-color);
 
     width: 100%;
@@ -96,6 +99,7 @@ body {
     list-style: none;
     color: var(--nav-text-color);
     margin-left: 0.9em;
+    
 }
 
 .nav-menu-item-current {
@@ -103,7 +107,7 @@ body {
 }
 
 .teasers {
-    padding: 1.2vmax;
+    padding: 1.2vmax 1.2vmax 0 1.2vmax;
 }
 
 .teaser {
@@ -150,33 +154,33 @@ body {
 
 .teaser-content {
     background-color: var(--teaser-background-color);
-    padding: 0.7em 1em;
+    padding: 0.7em 1em 0 1em;
+}
+
+.teaser p {
+    padding-bottom: 0.5em;
 }
 
 .teaser-footer-container {
-    margin-top: 0.35em;
+    font-size: 0.8em;
     display: flex;
     flex-direction: column;
+    background-color: var(--teaser-background-color);
     justify-content: center;
+    padding: 0.6em 1em 0.7em 1em;
 }
 
 .teaser-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--teaser-background-color);
-}
-
-.teaser p {
-    padding-bottom: 10px;
 }
 
 .teaser-read-more-link {
-    /* font-size: 1.8em; */
     text-decoration: none;
     border-top: 1px solid var(--teaser-read-more-link-color);
     padding-top: 0.2em;
-    color: var(--teaser-read-more-link-color);
+    color: var(--teaser-footer-text-color);
 }
 
 .teaser-date-container {
@@ -186,29 +190,17 @@ body {
 }
 
 .teaser-date {
-    font-size: 1em;
     font-size: 0.75em;
-    color: white;
-    /* background-color: #8da756b7; */
-    /* background-color: #8da756df; */
-    background-color: var(--teaser-date-background-color);
-    /* background-color: #6b725b; */
-    /* display: inline; */
-    /* font-size: 1.6em; */
-    padding: 0.2em 0.9em;
-    border-radius: 1em;
+    font-size: 1em;
+    color: var(--teaser-footer-text-color);
 }
 
-.footer-container {
-    padding: 1.2vmax;
-    /* background-color: blue; */
-}
 
 .footer {
     font-size: 0.8em;
     background-color: var(--footer-background-color);
     color: white;
-    padding: 0 1rem 1.2em 1rem;
+    padding: 1em 1rem 1.1em 1rem;
     text-align: center;
 }
 
