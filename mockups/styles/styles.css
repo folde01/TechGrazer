@@ -49,6 +49,15 @@ body {
   font-family: 'Cantarell', sans-serif;
 }
 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main {
+  padding-bottom: 2.5rem;
+}
+
 .nav {
   font-size: 1.3rem;
   font-weight: 600;
@@ -198,6 +207,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 900px) {
@@ -230,14 +245,16 @@ body {
 }
 
 .teaser-header .teaser-title {
+  font-size: 1.1em;
   color: var(--teaser-header-text-color);
   line-height: 1.4;
 }
 
 .teaser-header .teaser-thumb-container {
-  width: 40%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--nav-background-color)), to(#ddd));
-  background-image: linear-gradient(to bottom, var(--nav-background-color), #ddd);
+  margin: 0.2em 0.2em 0.2em 0;
+  padding: 0.8em 1.4rem;
+  max-width: 21vmax;
+  height: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7d7d), to(#ccc));
   background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
   display: -webkit-box;
@@ -254,7 +271,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border: 0.5em solid var(--teaser-header-background-color-left);
-  padding: 0.8em 0;
   border-radius: 1em;
 }
 
@@ -445,7 +461,8 @@ body {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
+  height: 2.5rem;
   bottom: 0;
   width: 100%;
   font-size: 0.8em;
