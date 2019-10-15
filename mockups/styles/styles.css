@@ -26,7 +26,7 @@
   --teaser-footer-text-color: #5cacdd;
   --footer-background-color: var(--body-background-color);
   --footer-background-color: var(--nav-background-color);
-  --footer-text-color: var(--teaser-background-color);
+  --footer-text-color: white;
 }
 
 * {
@@ -48,7 +48,7 @@ body .page-container {
 }
 
 body .page-container .main {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 body .page-container .main .nav {
@@ -154,6 +154,7 @@ body .page-container .main .nav .nav-content .nav-menu .nav-menu-items .nav-menu
 
 body .page-container .main .teasers {
   padding: 1.2vmax 1.2vmax 0 1.2vmax;
+  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 700px) {
@@ -186,7 +187,7 @@ body .page-container .main .teasers .teaser {
 
 body .page-container .main .teasers .teaser .teaser-header {
   font-size: 1.1rem;
-  padding: 0.5em 0em 0.5em 1em;
+  padding: 0.5em 0.5em 0.5em 1em;
   background: var(--teaser-header-background-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,7 +296,7 @@ body .page-container .main .teasers .teaser .teaser-main .teaser-text p:nth-last
 
 body .page-container .main .teasers .teaser .teaser-main .teaser-footer {
   font-size: 0.9em;
-  margin: 0.7em 0 0.5em;
+  margin: 0.6em 0 0.3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +327,7 @@ body .page-container .main .teasers .teaser .teaser-main .teaser-footer .teaser-
 
 body .page-container footer {
   position: absolute;
-  height: 2.5rem;
+  height: 3rem;
   bottom: 0;
   width: 100%;
   font-size: 0.8em;
@@ -334,6 +335,16 @@ body .page-container footer {
   color: var(--footer-text-color);
   padding: 1em 1rem 1.1em 1rem;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .page-container footer a {
