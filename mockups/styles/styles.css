@@ -1,6 +1,4 @@
 :root {
-  --brown-color: #4d4417;
-  --brown-color: #443900;
   --body-background-color: #697550;
   --body-background-color-top: #697550;
   --body-background-color-bottom: #697550;
@@ -44,11 +42,8 @@ body {
 
 body .page-container {
   position: relative;
+  padding-bottom: 4rem;
   min-height: 100vh;
-}
-
-body .page-container .main {
-  padding-bottom: 2rem;
 }
 
 body .page-container .main .nav {
@@ -189,7 +184,7 @@ body .page-container .main .teasers .teaser {
 
 body .page-container .main .teasers .teaser .teaser-header {
   font-size: 1.1rem;
-  padding: 0.5em 0.5em 0.5em 1em;
+  padding: 0.1em 0.1em 0.1em 1em;
   background: var(--teaser-header-background-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +274,7 @@ body .page-container .main .teasers .teaser .teaser-header .teaser-date {
 
 @media screen and (min-width: 700px) {
   body .page-container .main .teasers .teaser .teaser-header .teaser-date {
+    margin-top: 0.5em;
     display: block;
     font-size: 0.9rem;
     color: var(--teaser-footer-text-color);
@@ -315,6 +311,7 @@ body .page-container .main .teasers .teaser .teaser-main .teaser-text p:nth-last
 }
 
 body .page-container .main .teasers .teaser .teaser-main .teaser-footer {
+  margin-top: 0.7em;
   font-size: 0.9rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,6 +330,7 @@ body .page-container .main .teasers .teaser .teaser-main .teaser-footer {
 
 @media screen and (min-width: 700px) {
   body .page-container .main .teasers .teaser .teaser-main .teaser-footer {
+    margin-top: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -400,13 +398,13 @@ body .page-container .main .teasers .teaser .teaser-main .teaser-footer .teaser-
 
 body footer {
   position: absolute;
-  height: 3rem;
+  height: 4rem;
   bottom: 0;
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.9em;
   background-color: var(--footer-background-color);
   color: var(--footer-text-color);
-  padding: 1em 1rem 1.1em 1rem;
+  padding: 1.5em 1rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
