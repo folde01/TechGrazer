@@ -1,36 +1,21 @@
-:root {
-  --body-background-color: #697550;
-  --body-background-color-top: #697550;
-  --body-background-color-bottom: #697550;
-  --body-text-color: #b9b4b4;
-  --body-text-color: #ddd;
+$body-background-color: #697550;
+$body-text-color: #ddd;
 
-  --nav-background-color: #93ad5a;
-  --nav-background-color: #839b4f;
-  --nav-text-color: var(--logo-text-color);
+$logo-text-color: white;
 
-  --logo-text-color: #10393f;
-  --logo-text-color: #444703;
-  --logo-text-color: #413800;
-  --logo-text-color: white;
+$nav-background-color: #839b4f;
+$nav-text-color: $logo-text-color;
 
-  --teaser-header-background-color: #555;
-  --teaser-header-background-color-left: #555;
-  --teaser-header-background-color-right: #696969;
-  --teaser-header-background-color-right: #888;
-  --teaser-background-color: #323236;
+$teaser-header-background-color: #555;
+$teaser-background-color: #323236;
+$teaser-header-text-color: #e9e9e9;
+$teaser-thumb-gradient: linear-gradient(to bottom, #7d7d7d, #ccc);
+$teaser-read-more-link-color: #5d9ac0;
+$teaser-footer-text-color: #5cacdd;
 
-  --teaser-header-text-color: #e9e9e9;
-  --teaser-read-more-link-color: #5d9ac0;
-  --teaser-date-background-color: var(--body-background-color);
-  --teaser-date-text-color: var(--teaser-background-color);
-  --teaser-date-text-color: white;
-  --teaser-footer-text-color: #5cacdd;
-
-  --footer-background-color: var(--body-background-color);
-  --footer-background-color: var(--nav-background-color);
-  --footer-text-color: white;
-}
+$footer-background-color: $body-background-color;
+$footer-background-color: $nav-background-color;
+$footer-text-color: white;
 
 $medium-width: 500px;
 $large-width: 700px;
@@ -43,240 +28,237 @@ $xl-width: 900px;
 }
 
 body {
-  background: var(--body-background-color);
-  color: var(--body-text-color);
+  background: $body-background-color;
+  color: $body-text-color;
   font-family: "Cantarell", sans-serif;
+  position: relative;
+  padding-bottom: 4rem;
+  min-height: 100vh;
 
-  .page-container {
-    position: relative;
-    padding-bottom: 4rem;
-    min-height: 100vh;
+  .nav {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: $nav-background-color;
+    width: 100%;
+    color: $nav-text-color;
 
-    .main {
+    @media screen and (min-width: $medium-width) {
+      font-size: 1.7rem;
+    }
 
-      .nav {
-        font-size: 1.3rem;
+    .nav-content {
+      margin: 0 auto;
+      padding: 0.5em 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media screen and (min-width: $xl-width) {
+        max-width: $xl-width;
+      }
+
+      .logo-image {
+        height: 1.5em;
+        margin: 0 0.05em;
+      }
+
+      .home-logo-link a {
+        text-decoration: none;
+        color: $logo-text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-word {
+        font-size: 1.2em;
+        letter-spacing: 0.01em;
+        font-family: "Spinnaker", sans-serif;
         font-weight: 600;
-        padding: 1.5vmax 1.6vmax 1.45vmax 1.6vmax;
-        background: var(--nav-background-color);
-        width: 100%;
+      }
+
+      .nav-menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color: var(--nav-text-color);
-
+        font-size: 0.6em;
+        letter-spacing: 0.055em;
         @media screen and (min-width: $medium-width) {
-          font-size: 1.7rem;
+          font-size: 0.7em;
         }
 
-        .nav-content {
+        .nav-menu-items {
           display: flex;
-          flex-direction: row;
+
+          .nav-menu-item {
+            list-style: none;
+            color: $nav-text-color;
+            margin-left: 0.9em;
+          }
+
+          .nav-menu-item-current {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .teasers {
+    padding: 1.2vmax 1.2vmax 0 1.2vmax;
+    padding: 1.2vmax 0.5rem 0 0.5rem;
+    margin-bottom: 1.5em;
+
+    @media screen and (min-width: $xl-width) {
+      width: $xl-width;
+      margin: 0 auto;
+    }
+
+    .teaser {
+      background: $teaser-header-background-color;
+      margin-bottom: 1.2vmax;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $large-width) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .teaser-header {
+        font-size: 1.1rem;
+        padding: 0.1em 0.1em 0.1em 1em;
+
+        background: $teaser-header-background-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: $large-width) {
+          font-size: 1.3rem;
+          flex-direction: column;
           justify-content: space-between;
+          align-items: flex-start;
+          padding: 0.8rem 0.4em 0.8rem 0.8em;
+        }
 
-          .logo-image {
-            height: 1.5em;
-            margin: 0 0.05em;
+        .teaser-title {
+          font-size: 1.1em;
+          color: $teaser-header-text-color;
+          line-height: 1.4;
+        }
+
+        .teaser-thumb-container {
+          padding: 0.8em 1.4rem;
+          height: 100%;
+          background-image: $teaser-thumb-gradient;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 0.5em solid $teaser-header-background-color;
+          border-radius: 1em;
+
+          @media screen and (min-width: $medium-width) {
+            padding: 0.7em 1.2rem;
           }
 
-          .home-logo-link a {
-            text-decoration: none;
-            color: var(--logo-text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          @media screen and (min-width: $large-width) {
+            display: none;
           }
 
-          .logo-word {
-            font-size: 1.2em;
-            letter-spacing: 0.01em;
-            font-family: "Spinnaker", sans-serif;
-            font-weight: 600;
-          }
+          .teaser-thumb {
+            height: 4em;
 
-          .nav-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 0.6em;
-            letter-spacing: 0.055em;
             @media screen and (min-width: $medium-width) {
-              font-size: 0.7em;
+              height: 3.4em;
             }
+          }
+        }
 
-            .nav-menu-items {
-              display: flex;
-
-              .nav-menu-item {
-                list-style: none;
-                color: var(--nav-text-color);
-                margin-left: 0.9em;
-              }
-
-              .nav-menu-item-current {
-                text-decoration: underline;
-              }
-            }
+        .teaser-date {
+          display: none;
+          @media screen and (min-width: $large-width) {
+            margin-top: 0.5em;
+            display: block;
+            font-size: 0.9rem;
+            color: $teaser-footer-text-color;
           }
         }
       }
 
-      .teasers {
-        padding: 1.2vmax 1.2vmax 0 1.2vmax;
-        margin-bottom: 1.5em;
+      .teaser-main {
+        background: $teaser-background-color;
+        padding: 0.6em 1em;
 
         @media screen and (min-width: $large-width) {
-          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0.8rem 0.7em 0.8rem 1em;
         }
 
-        .teaser {
-          background: var(--teaser-header-color);
-          margin-bottom: 1.2vmax;
-          display: flex;
-          flex-direction: column;
-
-          @media screen and (min-width: $large-width) {
-            flex-direction: row;
-            justify-content: center;
+        .teaser-text {
+          p {
+            margin-bottom: 0.5em;
           }
 
-          .teaser-header {
-            font-size: 1.1rem;
-            // padding: 0.5em 0.5em 0.5em 1em;
-            padding: 0.1em 0.1em 0.1em 1em;
+          p:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
 
-            background: var(--teaser-header-background-color);
-            display: flex;
-            flex-direction: row;
+        .teaser-footer {
+          margin-top: 0.7em;
+          font-size: 0.9rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          @media screen and (min-width: $large-width) {
+            margin-top: 0;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+          }
+
+          .teaser-read-more-link {
+            text-decoration: underline;
+            color: $teaser-footer-text-color;
+          }
+
+          .teaser-date {
+            color: $teaser-footer-text-color;
+            @media screen and (min-width: $large-width) {
+              display: none;
+            }
+          }
+
+          .teaser-thumb-container {
+            display: none;
+
+            @media screen and (min-width: $medium-width) {
+              padding: 0.7em 1.2rem;
+            }
 
             @media screen and (min-width: $large-width) {
-              font-size: 1.3rem;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: flex-start;
-              padding: 0.8rem 0.4em 0.8rem 0.8em;
-            }
-
-            .teaser-title {
-              font-size: 1.1em;
-              color: var(--teaser-header-text-color);
-              line-height: 1.4;
-            }
-
-            .teaser-thumb-container {
+              margin-left: 0.5em;
               padding: 0.8em 1.4rem;
-              height: 100%;
-              background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
+              background-image: $teaser-thumb-gradient;
 
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              border: 0.5em solid var(--teaser-header-background-color);
+              border: 0.5em solid $teaser-background-color;
               border-radius: 1em;
+            }
 
-              @media screen and (min-width: $medium-width) {
-                padding: 0.7em 1.2rem;
-              }
-
+            .teaser-thumb {
               @media screen and (min-width: $large-width) {
-                display: none;
-              }
-
-              .teaser-thumb {
-                height: 4em;
-
-                @media screen and (min-width: $medium-width) {
-                  height: 3.4em;
-                }
-              }
-            }
-
-            .teaser-date {
-              display: none;
-              @media screen and (min-width: $large-width) {
-                margin-top: 0.5em;
-                display: block;
-                font-size: 0.9rem;
-                color: var(--teaser-footer-text-color);
-              }
-            }
-          }
-
-          .teaser-main {
-            background: var(--teaser-background-color);
-            padding: 0.6em 1em;
-
-            @media screen and (min-width: $large-width) {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              padding: 0.8rem 0.7em 0.8rem 1em;
-            }
-
-            .teaser-text {
-              p {
-                margin-bottom: 0.5em;
-              }
-
-              p:nth-last-child(1) {
-                margin-bottom: 0;
-              }
-            }
-
-            .teaser-footer {
-              margin-top: 0.7em;
-              font-size: 0.9rem;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-
-              @media screen and (min-width: $large-width) {
-                margin-top: 0;
-                flex-direction: column;
-                justify-content: space-between;
-              }
-
-              .teaser-read-more-link {
-                text-decoration: underline;
-                color: var(--teaser-footer-text-color);
-              }
-
-              .teaser-date {
-                color: var(--teaser-footer-text-color);
-                @media screen and (min-width: $large-width) {
-                  display: none;
-                }
-              }
-
-              .teaser-thumb-container {
-                display: none;
-
-                @media screen and (min-width: $medium-width) {
-                  padding: 0.7em 1.2rem;
-                }
-
-                @media screen and (min-width: $large-width) {
-                  margin-left: 0.5em;
-                  padding: 0.8em 1.4rem;
-                  background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
-
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                  border: 0.5em solid var(--teaser-background-color);
-                  border-radius: 1em;
-                }
-
-                .teaser-thumb {
-                  @media screen and (min-width: $large-width) {
-                    height: 6em;
-                  }
-                }
+                height: 6em;
               }
             }
           }
@@ -284,27 +266,28 @@ body {
       }
     }
   }
+}
 
-  footer {
-    position: absolute;
-    height: 4rem;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9em;
-    background-color: var(--footer-background-color);
-    color: var(--footer-text-color);
-    padding: 1.5em 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    a {
-      text-decoration: underline;
-      color: var(--footer-text-color);
-    }
+footer {
+  position: absolute;
+  height: 4rem;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
+  background-color: $footer-background-color;
+  color: $footer-text-color;
+  padding: 1.5em 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  a {
+    text-decoration: underline;
+    color: $footer-text-color;
+  }
 
-    a:visited {
-      color: var(--footer-text-color);
-    }
+  a:visited {
+    color: $footer-text-color;
   }
 }
