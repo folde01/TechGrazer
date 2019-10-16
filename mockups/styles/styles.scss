@@ -18,7 +18,7 @@ $footer-background-color: $nav-background-color;
 $footer-text-color: white;
 
 $medium-width: 500px;
-$large-width: 700px;
+$large-width: 800px;
 $xl-width: 900px;
 
 * {
@@ -26,8 +26,6 @@ $xl-width: 900px;
   padding: 0;
   box-sizing: border-box;
 }
-
-
 
 body {
   background: $body-background-color;
@@ -50,7 +48,7 @@ body {
 
     .nav-content {
       margin: 0 auto;
-      padding: 0.5em 0.5rem;
+      padding: 0.5em 1.5rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -122,11 +120,6 @@ body {
       display: flex;
       flex-direction: column;
 
-      // @media screen and (min-width: $large-width) {
-      //   flex-direction: row;
-      //   justify-content: center;
-      // }
-
       @media screen and (min-width: $large-width) {
         flex-direction: row;
         justify-content: flex-start;
@@ -159,19 +152,10 @@ body {
 
         .teaser-thumb-container {
           padding: 0.5em 0.5rem;
-          height: 100%;
-          // background-image: $teaser-thumb-gradient;
-          // background: $teaser-background-color;
-
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          // border-radius: 1em;
-
-          @media screen and (min-width: $medium-width) {
-            padding: 0.7em 1.2rem;
-          }
 
           @media screen and (min-width: $large-width) {
             display: none;
@@ -187,9 +171,8 @@ body {
         }
 
         .teaser-thumb-backdrop {
-          padding: 0.8em 1rem;
+          padding: 0.5em 1rem;
           // padding: 0.8em 1.4rem;
-          height: 100%;
           background-image: $teaser-thumb-gradient;
 
           display: flex;
@@ -198,10 +181,6 @@ body {
           align-items: center;
           border: 0.5em solid $teaser-header-background-color;
           border-radius: 0.65em;
-
-          @media screen and (min-width: $medium-width) {
-            padding: 0.7em 1.2rem;
-          }
 
           @media screen and (min-width: $large-width) {
             display: none;
@@ -214,8 +193,6 @@ body {
               height: 3.4em;
             }
           }
-
-
         }
 
         .teaser-date {
@@ -239,6 +216,8 @@ body {
           flex-direction: row;
           justify-content: space-between;
           padding: 0.8rem 0.7em 0.8rem 1em;
+          padding: 0.8rem 1em 0.8rem 1em;
+          // padding: 0.8rem 0.5em 0.8rem 1em;
         }
 
         .teaser-text {
@@ -252,7 +231,10 @@ body {
         }
 
         .teaser-footer {
-          margin-top: 0.7em;
+          // margin-bottom: 0.5em;
+          margin-top: 0.6em;
+          // margin-left: 1em;
+          // margin-right: 0.2em;
           font-size: 0.9rem;
           display: flex;
           flex-direction: row;
@@ -260,14 +242,23 @@ body {
           align-items: center;
 
           @media screen and (min-width: $large-width) {
-            margin-top: 0;
+            margin-left: 1em;
+            margin-right: 0.2em;
+            // background: $teaser-header-background-color;
+            // padding: 1em;
+            // margin-top: 0;
             flex-direction: column;
             justify-content: space-between;
+            // justify-content: space-around;
           }
 
           .teaser-read-more-link {
             text-decoration: underline;
             color: $teaser-footer-text-color;
+
+            @media screen and (min-width: $large-width) {
+              margin-top: 1.5em;
+            }
           }
 
           .teaser-date {
@@ -281,25 +272,27 @@ body {
             display: none;
 
             @media screen and (min-width: $medium-width) {
-              padding: 0.7em 1.2rem;
+              // padding: 0.6em 0.5rem;
             }
 
             @media screen and (min-width: $large-width) {
+              // padding: 0.5em 0.5rem;
+
               margin-left: 0.5em;
-              padding: 0.8em 1.4rem;
-              background-image: $teaser-thumb-gradient;
+              // padding: 0.8em 1.4rem;
+              // background-image: $teaser-thumb-gradient;
 
               display: flex;
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              border: 0.5em solid $teaser-background-color;
-              border-radius: 1em;
+              // border: 0.5em solid $teaser-background-color;
+              // border-radius: 1em;
             }
 
             .teaser-thumb {
               @media screen and (min-width: $large-width) {
-                height: 6em;
+                height: 8em;
               }
             }
           }
@@ -308,7 +301,8 @@ body {
             display: none;
 
             @media screen and (min-width: $medium-width) {
-              padding: 0.7em 1.2rem;
+              // padding: 0.7em 1.2rem;
+              // display: none;
             }
 
             @media screen and (min-width: $large-width) {
@@ -320,8 +314,8 @@ body {
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              border: 0.5em solid $teaser-background-color;
-              border-radius: 1em;
+              // border: 0.5em solid $teaser-background-color;
+              // border-radius: 0.9em;
             }
 
             .teaser-thumb {

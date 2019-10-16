@@ -30,7 +30,7 @@ body .nav {
 
 body .nav .nav-content {
   margin: 0 auto;
-  padding: 0.5em 0.5rem;
+  padding: 0.5em 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +137,7 @@ body .teasers .teaser {
           flex-direction: column;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -168,7 +168,7 @@ body .teasers .teaser .teaser-header {
           align-items: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-header {
     width: 36%;
     font-size: 1.3rem;
@@ -194,7 +194,6 @@ body .teasers .teaser .teaser-header .teaser-title {
 
 body .teasers .teaser .teaser-header .teaser-thumb-container {
   padding: 0.5em 0.5rem;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,13 +209,7 @@ body .teasers .teaser .teaser-header .teaser-thumb-container {
           align-items: center;
 }
 
-@media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-container {
-    padding: 0.7em 1.2rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-header .teaser-thumb-container {
     display: none;
   }
@@ -233,8 +226,7 @@ body .teasers .teaser .teaser-header .teaser-thumb-container .teaser-thumb {
 }
 
 body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
-  padding: 0.8em 1rem;
-  height: 100%;
+  padding: 0.5em 1rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7d7d), to(#ccc));
   background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
   display: -webkit-box;
@@ -254,13 +246,7 @@ body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
   border-radius: 0.65em;
 }
 
-@media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
-    padding: 0.7em 1.2rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
     display: none;
   }
@@ -280,7 +266,7 @@ body .teasers .teaser .teaser-header .teaser-date {
   display: none;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-header .teaser-date {
     margin-top: 0.5em;
     display: block;
@@ -294,7 +280,7 @@ body .teasers .teaser .teaser-main {
   padding: 0.6em 1em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main {
     width: 64%;
     display: -webkit-box;
@@ -308,6 +294,7 @@ body .teasers .teaser .teaser-main {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0.8rem 0.7em 0.8rem 1em;
+    padding: 0.8rem 1em 0.8rem 1em;
   }
 }
 
@@ -320,7 +307,7 @@ body .teasers .teaser .teaser-main .teaser-text p:nth-last-child(1) {
 }
 
 body .teasers .teaser .teaser-main .teaser-footer {
-  margin-top: 0.7em;
+  margin-top: 0.6em;
   font-size: 0.9rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,9 +324,10 @@ body .teasers .teaser .teaser-main .teaser-footer {
           align-items: center;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer {
-    margin-top: 0;
+    margin-left: 1em;
+    margin-right: 0.2em;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -355,11 +343,17 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-read-more-link {
   color: #5cacdd;
 }
 
+@media screen and (min-width: 800px) {
+  body .teasers .teaser .teaser-main .teaser-footer .teaser-read-more-link {
+    margin-top: 1.5em;
+  }
+}
+
 body .teasers .teaser .teaser-main .teaser-footer .teaser-date {
   color: #5cacdd;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer .teaser-date {
     display: none;
   }
@@ -369,18 +363,9 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-container {
   display: none;
 }
 
-@media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-container {
-    padding: 0.7em 1.2rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-container {
     margin-left: 0.5em;
-    padding: 0.8em 1.4rem;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7d7d), to(#ccc));
-    background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,14 +379,12 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 0.5em solid #323236;
-    border-radius: 1em;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-container .teaser-thumb {
-    height: 6em;
+    height: 8em;
   }
 }
 
@@ -409,13 +392,7 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop {
   display: none;
 }
 
-@media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop {
-    padding: 0.7em 1.2rem;
-  }
-}
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop {
     margin-left: 0.5em;
     padding: 0.8em 1.4rem;
@@ -434,12 +411,10 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 0.5em solid #323236;
-    border-radius: 1em;
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop .teaser-thumb {
     height: 6em;
   }
