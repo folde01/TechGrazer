@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-body .nav {
+body .page-header {
   font-size: 1.3rem;
   font-weight: 600;
   background: #839b4f;
@@ -23,12 +23,12 @@ body .nav {
 }
 
 @media screen and (min-width: 500px) {
-  body .nav {
+  body .page-header {
     font-size: 1.7rem;
   }
 }
 
-body .nav .nav-content {
+body .page-header .page-header-content {
   margin: 0 auto;
   padding: 0.5em 1.5rem;
   display: -webkit-box;
@@ -44,17 +44,17 @@ body .nav .nav-content {
 }
 
 @media screen and (min-width: 900px) {
-  body .nav .nav-content {
+  body .page-header .page-header-content {
     max-width: 900px;
   }
 }
 
-body .nav .nav-content .logo-image {
+body .page-header .page-header-content .site-logo-image {
   height: 1.5em;
   margin: 0 0.05em;
 }
 
-body .nav .nav-content .home-logo-link a {
+body .page-header .page-header-content .site-logo a {
   text-decoration: none;
   color: white;
   display: -webkit-box;
@@ -68,14 +68,14 @@ body .nav .nav-content .home-logo-link a {
           align-items: center;
 }
 
-body .nav .nav-content .logo-word {
+body .page-header .page-header-content .site-logo-word {
   font-size: 1.2em;
   letter-spacing: 0.01em;
   font-family: "Spinnaker", sans-serif;
   font-weight: 600;
 }
 
-body .nav .nav-content .nav-menu {
+body .page-header .page-header-content .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,24 +91,24 @@ body .nav .nav-content .nav-menu {
 }
 
 @media screen and (min-width: 500px) {
-  body .nav .nav-content .nav-menu {
+  body .page-header .page-header-content .nav-menu {
     font-size: 0.7em;
   }
 }
 
-body .nav .nav-content .nav-menu .nav-menu-items {
+body .page-header .page-header-content .nav-menu .nav-menu-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .nav .nav-content .nav-menu .nav-menu-items .nav-menu-item {
+body .page-header .page-header-content .nav-menu .nav-menu-items .nav-menu-item {
   list-style: none;
   color: white;
   margin-left: 0.9em;
 }
 
-body .nav .nav-content .nav-menu .nav-menu-items .nav-menu-item-current {
+body .page-header .page-header-content .nav-menu .nav-menu-items .nav-menu-item-current {
   text-decoration: underline;
 }
 
@@ -150,8 +150,13 @@ body .teasers .teaser {
 }
 
 body .teasers .teaser .teaser-header {
-  font-size: 1.1rem;
-  padding: 0.1em 0.1em 0.1em 1em;
+  font-size: 0;
+  padding: 0;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 0.3rem 0.3rem 0.3rem 1rem;
+  padding: 0.3rem 0.6rem 0rem 1rem;
+  padding: 0.3rem 0rem 0rem 1rem;
+  padding: 0rem 0rem 0rem 1rem;
   background: #555;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,9 +168,15 @@ body .teasers .teaser .teaser-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-top: 4px solid #555;
+  border-left: 4px solid #555;
+  border-right: 4px solid #555;
 }
 
 @media screen and (min-width: 800px) {
@@ -187,13 +198,16 @@ body .teasers .teaser .teaser-header {
 }
 
 body .teasers .teaser .teaser-header .teaser-title {
-  font-size: 1.1em;
+  font-size: 1.2rem;
   color: #e9e9e9;
-  line-height: 1.4;
+  line-height: 1.6;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 
-body .teasers .teaser .teaser-header .teaser-thumb-container {
-  padding: 0.5em 0.5rem;
+body .teasers .teaser .teaser-header .teaser-backdrop-container {
+  background: #323236;
+  margin-left: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,32 +215,19 @@ body .teasers .teaser .teaser-header .teaser-thumb-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-left: 4px solid #555;
+  border-bottom: 0;
+  border-top: 0;
 }
 
-@media screen and (min-width: 800px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-container {
-    display: none;
-  }
-}
-
-body .teasers .teaser .teaser-header .teaser-thumb-container .teaser-thumb {
-  height: 4em;
-}
-
-@media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-container .teaser-thumb {
-    height: 3.4em;
-  }
-}
-
-body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
+body .teasers .teaser .teaser-header .teaser-backdrop-container .teaser-thumb-backdrop {
+  font-size: 1rem;
+  margin-top: auto;
   padding: 0.5em 1rem;
+  border-bottom: 4px solid #555;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#7d7d7d), to(#ccc));
   background-image: linear-gradient(to bottom, #7d7d7d, #ccc);
   display: -webkit-box;
@@ -242,22 +243,41 @@ body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 0.5em solid #555;
-  border-radius: 0.65em;
 }
 
 @media screen and (min-width: 800px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-backdrop {
+  body .teasers .teaser .teaser-header .teaser-backdrop-container .teaser-thumb-backdrop {
     display: none;
   }
 }
 
-body .teasers .teaser .teaser-header .teaser-thumb-backdrop .teaser-thumb {
-  height: 4em;
+body .teasers .teaser .teaser-header .teaser-backdrop-container .teaser-thumb-backdrop .teaser-thumb {
+  height: 5em;
 }
 
 @media screen and (min-width: 500px) {
-  body .teasers .teaser .teaser-header .teaser-thumb-backdrop .teaser-thumb {
+  body .teasers .teaser .teaser-header .teaser-backdrop-container .teaser-thumb-backdrop .teaser-thumb {
+    height: 3.4em;
+  }
+}
+
+body .teasers .teaser .teaser-header .teaser-thumb-container {
+  margin-left: 0.6rem;
+  height: 6.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  body .teasers .teaser .teaser-header .teaser-thumb-container {
+    display: none;
+  }
+}
+
+body .teasers .teaser .teaser-header .teaser-thumb-container .teaser-thumb {
+  height: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  body .teasers .teaser .teaser-header .teaser-thumb-container .teaser-thumb {
     height: 3.4em;
   }
 }
@@ -276,6 +296,7 @@ body .teasers .teaser .teaser-header .teaser-date {
 }
 
 body .teasers .teaser .teaser-main {
+  border-top: 0;
   background: #323236;
   padding: 0.6em 1em;
 }
@@ -420,7 +441,7 @@ body .teasers .teaser .teaser-main .teaser-footer .teaser-thumb-backdrop {
   }
 }
 
-footer {
+.page-footer {
   position: absolute;
   height: 4rem;
   bottom: 0;
@@ -442,12 +463,12 @@ footer {
           justify-content: center;
 }
 
-footer a {
+.page-footer a {
   text-decoration: underline;
   color: white;
 }
 
-footer a:visited {
+.page-footer a:visited {
   color: white;
 }
 /*# sourceMappingURL=styles.css.map */
