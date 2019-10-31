@@ -150,7 +150,7 @@ body {
           // float: right;
           // padding: 1em 2.4em;
           padding: 0.2rem 1rem;
-        // margin-right: 1.1em;
+          // margin-right: 1.1em;
         }
 
         @media screen and (min-width: $large-width) {
@@ -159,7 +159,7 @@ body {
           flex-direction: column;
           justify-content: space-between;
           align-items: flex-start;
-          padding: 0.2rem 0.8em 0.8rem 0.8em;
+          padding: 0.2rem 0.8em 1rem 0.8em;
           // padding: 0.8rem;
         }
 
@@ -205,12 +205,10 @@ body {
             padding-left: 0.3em;
             padding-right: 0.2em;
             padding-top: 0.8em;
-
           }
 
           .teaser-thumb-backdrop {
             float: left;
-            // float: right;
             margin-right: 1.1em;
             font-size: 1rem;
             margin: 0.4em 0.7em 0.2em 0.8em;
@@ -219,7 +217,12 @@ body {
 
             @media screen and (min-width: $medium-width) {
               float: right;
-              // margin-right: 1.1em;
+              margin-top: 0.55em;
+            }
+
+            @media screen and (min-width: $large-width) {
+              margin-top: 0.4em;
+              margin-bottom: 0.5em;
             }
 
             display: flex;
@@ -228,17 +231,24 @@ body {
             align-items: center;
 
             .teaser-thumb {
-              height: 5em;
               height: 4em;
 
               @media screen and (min-width: $medium-width) {
                 height: 3.4em;
+              }
+
+              @media screen and (min-width: $large-width) {
+                height: 5em;
               }
             }
           }
 
           .teaser-text {
             margin: 0em 0.7em;
+
+            @media screen and (min-width: $medium-width) {
+              margin-top: 0.15em;
+            }
 
             p {
               margin-bottom: 0.5em;
@@ -260,7 +270,7 @@ body {
           align-items: center;
 
           @media screen and (min-width: $large-width) {
-            margin: 1em 1em 1rem 0.7em;
+            margin: 0.8em 1em 1rem 0.7em;
             justify-content: center;
           }
 

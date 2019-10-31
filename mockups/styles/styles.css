@@ -184,7 +184,7 @@ body .teasers .teaser .teaser-header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 0.2rem 0.8em 0.8rem 0.8em;
+    padding: 0.2rem 0.8em 1rem 0.8em;
   }
 }
 
@@ -273,11 +273,18 @@ body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop
 @media screen and (min-width: 500px) {
   body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop {
     float: right;
+    margin-top: 0.55em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop {
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
   }
 }
 
 body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop .teaser-thumb {
-  height: 5em;
   height: 4em;
 }
 
@@ -287,8 +294,20 @@ body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop
   }
 }
 
+@media screen and (min-width: 800px) {
+  body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-thumb-backdrop .teaser-thumb {
+    height: 5em;
+  }
+}
+
 body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-text {
   margin: 0em 0.7em;
+}
+
+@media screen and (min-width: 500px) {
+  body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-text {
+    margin-top: 0.15em;
+  }
 }
 
 body .teasers .teaser .teaser-main .teaser-text-and-thumb .teaser-text p {
@@ -320,7 +339,7 @@ body .teasers .teaser .teaser-main .teaser-footer {
 
 @media screen and (min-width: 800px) {
   body .teasers .teaser .teaser-main .teaser-footer {
-    margin: 1em 1em 1rem 0.7em;
+    margin: 0.8em 1em 1rem 0.7em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
