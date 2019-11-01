@@ -59,6 +59,10 @@ body .page-header .page-header-content {
   }
 }
 
+body .page-header .page-header-content .site-logo {
+  font-size: 1em;
+}
+
 body .page-header .page-header-content .site-logo a {
   text-decoration: none;
   color: white;
@@ -74,7 +78,7 @@ body .page-header .page-header-content .site-logo a {
 }
 
 body .page-header .page-header-content .site-logo a .site-logo-word {
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 0.01em;
   font-family: "Spinnaker", sans-serif;
   font-weight: 600;
@@ -82,6 +86,7 @@ body .page-header .page-header-content .site-logo a .site-logo-word {
 
 body .page-header .page-header-content .site-logo a img {
   height: 1.5em;
+  height: 1.4em;
   margin: 0 0.05em;
 }
 
@@ -90,7 +95,7 @@ body .page-header .page-header-content .header-menu {
   letter-spacing: 0.055em;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
   body .page-header .page-header-content .header-menu {
     font-size: 0.7em;
   }
@@ -106,6 +111,12 @@ body .page-header .page-header-content .header-menu .header-menu-items .header-m
   list-style: none;
   color: white;
   margin-left: 0.9em;
+}
+
+@media screen and (min-width: 500px) {
+  body .page-header .page-header-content .header-menu .header-menu-items .header-menu-item {
+    margin-left: 1.2em;
+  }
 }
 
 body .page-header .page-header-content .header-menu .header-menu-items .header-menu-item-current {
